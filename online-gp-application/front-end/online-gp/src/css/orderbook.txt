@@ -1,0 +1,89 @@
+import React, { useEffect, useState } from 'react';
+import { Client } from '@stomp/stompjs';
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+} from 'chart.js';
+
+ChartJS.register(
+  CategoryScale, // Register the category scale
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+const OrderBook = () => {
+    const [orderBook, setOrderBook] = useState({ bids: [], asks: [] });
+
+    useEffect(() => {
+        // Call backend API to start WebSocket connections
+        fetch('http://localhost:8081/api/marketdata/start-websocket')
+            .then(response => response.text())
+            .then(data => {
+                console.log('WebSocket start response:', data);
+            })
+            .catch(error => console.error('Error starting WebSocket connections:', error));
+
+        // Set up WebSocket client to receive data from backend
+        const client = new Client({
+            brokerURL: 'ws://localhost:8081/ws', // Match this with the backend WebSocket endpoint
+            onConnect: () => {
+                console.log('Connected to WebSocket');
+
+                // Subscribe to order book updates
+                client.subscribe('/topic/orderbook', (message) => {
+                    try {
+                        const data = JSON.parse(message.body);
+                        if (data && data.bids && data.asks) {
+                            setOrderBook(data);
+                        } else {
+                            console.error('Received invalid order book data:', data);
+                        }
+                    } catch (error) {
+                        console.error('Error parsing order book data:', error);
+                    }
+                });
+            },
+            onStompError: (frame) => {
+                console.error('Broker error:', frame.headers['message']);
+            },
+            reconnectDelay: 5000,
+        });
+
+        client.activate();
+
+        // Cleanup function to deactivate the WebSocket client
+        return () => {
+            client.deactivate();
+        };
+    }, []);
+
+    return (
+        <div>
+           
+            <div>
+               
+                {orderBook.bids.map((bid, index) => (
+                    <div key={index}>{`Price: ${bid.price}, Quantity: ${bid.quantity}`}</div>
+                ))}
+            </div>
+            <div>
+               
+                {orderBook.asks.map((ask, index) => (
+                    <div key={index}>{`Price: ${ask.price}, Quantity: ${ask.quantity}`}</div>
+                ))}
+            </div>
+        </div>
+    );
+};
+
+export default OrderBook;

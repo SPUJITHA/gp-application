@@ -1,0 +1,181 @@
+
+.patient-profile-container {
+    display: flex;
+    max-width: 100%;
+    width: 1000px; /* Set this to the total desired width including the sidebar and main content */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 5%;
+  }
+  
+  .sidebar {
+    flex: 1;
+    background: #f4f4f4;
+    padding: 20px;
+    max-width: 250px; /* Adjust width as needed */
+  }
+  
+  .sidebar-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .patient-main-content {
+    flex: 4;
+    padding: 20px;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    width: 700px; /* or any other fixed width you prefer */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .patient-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .personal-details, .medical-details {
+    margin-bottom: 20px;
+  }
+  
+  .row .button {
+    align-self: flex-end;
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .row .button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .patient-profile-container {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      max-width: none;
+      margin-bottom: 20px;
+    }
+  }
+
+  
+  .sidebar-item.active {
+    background-color: #007bff;
+    color: white;
+  }
+  .patient-main-content {
+    flex: 4; /* You can keep this if you want the main content to grow four times faster than the sidebar */
+    padding: 20px;
+    background: #fff;
+    border-left: 1px solid #ddd;
+    box-sizing: border-box; /* Make sure padding does not add to the width */
+    max-width: calc(100% - 250px - 1px); /* Assuming the sidebar is 250px, subtract this from the 100% width of the container */
+    width: 100%; /* You could use percentages to manage width */
+  }
+
+  @media (max-width: 768px) {
+    .patient-profile-container {
+      flex-direction: column;
+    }
+    
+    .sidebar,
+    .main-content {
+      max-width: none; /* Remove any max-width */
+      width: 100%; /* Make sure both take full width */
+    }
+  }
+
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Adjust as needed */
+  }
+  
+  .detail {
+    flex: 1;
+    margin-right: 10px; /* Adjust as needed */
+  }
+  
+  /* You may want to target the last .detail in each .row to remove the margin-right */
+  .row .detail:last-child {
+    margin-right: 0;
+  }
+  
+  .row .next-button {
+    align-self: flex-end;
+    margin-top: 10px; /* Adjust as needed */
+    background-color: #2980b9;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+    
+    .detail {
+      margin-right: 0;
+    }
+  }
+
+/* Style for the active state of buttons */
+.form-navigation-buttons .active {
+  background-color: #2980b9;
+  color: white;
+}
+
+/* Style for the active state of buttons */
+.form-navigation-buttons .submit-button {
+  background-color: #2980b9;
+  color: white;
+}
+
+/* Existing styles... */
+
+.form-navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.prev-button, .submit-button {
+  padding: 10px 20px;
+  background-color: #5cb85c; /* Adjust the colors as needed */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.prev-button {
+  background-color: #f0ad4e; /* Usually, "Previous" buttons have a different color */
+}
+
+/* Rest of your styles... */
+.error-message {
+  color: red;
+  font-size: 0.8rem; /* or however small you want it */
+  margin-top: 0.5rem;
+}
+
+.form-navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.disabled-input {
+  background-color: #f0f0f0; /* Light grey to indicate it's read-only */
+  color: #888; /* Lighter text color */
+  cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+  border: 1px solid #ddd; /* Maintain consistent border styling */
+}
+
+   

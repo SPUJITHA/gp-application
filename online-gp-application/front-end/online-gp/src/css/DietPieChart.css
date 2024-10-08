@@ -1,0 +1,68 @@
+.chart-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%; /* Ensure the container takes full width */
+    gap: 20px; /* Space between chart and info */
+    padding-left : 10px;
+}
+
+.wellness-info {
+    width: 100%; /* Adjust percentage as needed */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 10px;
+}
+
+.health-info {
+    display: flex;
+    flex-direction: row; /* Align items in a row */
+    justify-content: space-between;
+    gap: 20px; /* Adds space between elements */
+    padding-left: 10px;
+}
+
+.charts {
+    width: 100%; /* Adjust percentage as needed */
+    display: flex;
+    justify-content: center; /* Center the chart */
+}
+
+.symptom-dropdown {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+    }
+    
+    .charts {
+        width: 100%; /* Adjust chart width on smaller screens */
+    }
+
+    .wellness-info {
+        width: 100%; /* Adjust info width on smaller screens */
+    }
+
+    .health-info {
+        flex-direction: column; /* Stack tips and diet vertically */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .health-tips p, .health-diet p {
+      font-size: 16px; /* Slightly smaller font size for mobile devices */
+    }
+  
+    .health-tips h2, .health-diet h2 {
+      font-size: 20px; /* Adjust header size on mobile */
+    }
+  }
+  

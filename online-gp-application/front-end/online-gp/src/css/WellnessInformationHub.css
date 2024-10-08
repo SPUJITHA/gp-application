@@ -1,0 +1,228 @@
+/* .wellness-information-hub {
+  max-width: 1400px;
+  background-color: #f9f9f9; /* Light background for contrast */
+  /* width: 1400px;
+  align-items: left;
+  padding: 20px;
+} */ 
+.header {
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+   /* Adjust the color to match your theme */
+  color: white;
+}
+
+
+.wellness-tips, .diet-charts {
+  margin-bottom: 20px;
+}
+
+.symptoms-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.symptom {
+  margin-bottom: 10px;
+  background-color: #e0e0e0; /* Light grey background for symptoms */
+  padding: 10px;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px;
+  background-color: #007bff;
+  color: rgb(3, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Adjust the .main-content to use a top value that is always below the navbar */
+.main-content {
+padding-top: 60px; /* This should be at least the height of your navbar */
+padding-bottom: 20px; /* Extra space at the bottom */
+margin: auto; /* Center the div on the page */
+width: 1200px;
+max-width: 2500px; /* Maximum width of the main content area */
+position: relative; /* Use relative positioning */
+box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+@media screen and (max-width: 768px) {
+.main-content {
+  padding-top: 60px; /* Increase if navbar height increases */
+  width: 200%; /* Full width on smaller screens */
+}
+}
+
+@media screen and (zoom: 110%) {
+.main-content {
+  padding-top: 80px; /* Adjust top padding to account for zoomed in content */
+}
+}
+
+.container .chart-container {
+  width: 500px; /* Stretch to the full width of the container */
+  max-width: 100%; /* Ensure it does not exceed the container's width */
+  display: flex;
+  justify-content: right; /* Center chart in the container */
+  align-items: left; /* Align vertically */
+  height: 700px;
+  
+}
+
+.container
+{
+  padding-top: 40px;
+}
+.controls-container
+{
+  width : 100px;
+}
+.select-symptom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+select {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 300px; 
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#root
+{
+  max-width :100%;
+  text-align: center;
+}
+
+.health-info {
+  display: flex;
+  flex-direction: column; /* Organize children vertically */
+  margin-left: 20px; /* Add some spacing between the chart and the text */
+  width: 1000px;
+}
+
+.health-tips, .health-diet {
+  margin-bottom: 10px; /* Adds some spacing between the tips and diet */
+}
+
+h2 {
+  font-size: 16px; /* Slightly larger font size for headers */
+  color: #333; /* Darker color for better readability */
+  margin-bottom: 5px; /* Space below the header */
+}
+
+p {
+  font-size: 14px; /* Standard font size for content */
+  color: #666; /* Gray color for the content */
+  line-height: 1.4; /* Adequate line spacing for readability */
+}
+
+.health-tips h2, .health-diet h2 {
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.health-tips p, .health-diet p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .health-info {
+      flex-direction: column; /* Stacks elements vertically on small screens */
+  }
+}
+
+.controls-container select {
+  width: 100%;  /* Ensure dropdown width is sufficient */
+  padding: 8px; /* Add padding for better touch interaction */
+  margin-bottom: 20px; /* Provide space below the dropdown */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensure everything is centered */
+  width: 100%; /* Take the full width to manage inner content */
+  padding: 20px; /* Add padding around the content */
+}
+
+.slider {
+  width: 100%;  /* Adjust the width as needed */
+  margin: 20px auto;  /* Adds margin on the top and bottom, and auto centers it horizontally */
+  overflow: hidden;  /* Hides anything outside the bounds of the container */
+  height : 300px;
+}
+
+.slider img {
+  max-width: 100%;  /* Limits the image width to 100% of its container */
+  height: 1000px;  /* Maintains the aspect ratio */
+  display: block;  /* Removes additional space below the image */
+  margin: 0 auto;  /* Centers the image horizontally */
+}
+
+
+/* Additional styles to adjust the layout of items within the container */
+.symptom-selector {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.wellness-information-hub {
+  max-width: 1400px;
+  background-color: #f9f9f9;
+  width: 100%;  /* Makes the container responsive */
+  padding: 20px;
+}
+
+.slider {
+  width: 80%;  /* Ensures that the slider does not exceed the main content width */
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slider img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+h4 {
+  max-width: 80%; /* Limits the width of h4 headings to a specific percentage */
+}
+
+@media (max-width: 768px) {
+  .slider {
+      width: 95%;
+  }
+
+  .slider img {
+      max-width: 100%;
+  }
+
+  h4 {
+      max-width: 95%;
+  }
+}

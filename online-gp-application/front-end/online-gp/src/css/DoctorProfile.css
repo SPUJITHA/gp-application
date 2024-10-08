@@ -1,0 +1,182 @@
+
+h2, h3 {
+    text-align: center;
+  }
+  
+  /* Add more styles for the rest of your content */
+  
+     
+  .navbar {
+    overflow: hidden;
+    background-color: #3498db;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+  }
+  
+  .navbar a {
+    float: right;
+    display: block; 
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: #3498db;
+  }
+  
+  .navbar a.active {
+    background-color: #2980b9; 
+    color: white;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #3498db;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* Adjust this value to increase the height */
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start; /* Align links from left to right */
+    padding: 10px 20px; /* Adjust top and bottom padding as needed */
+    align-items: center; /* This will vertically center the contents */
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto; /* Push the links to the right */
+  }
+  
+  .navbar .welcome-message {
+    margin-right: auto; /* pushes the navigation links to the right */
+    padding-left: 1rem; /* adds some space after the logo */
+    display: flex; /* aligns the message vertically */
+    align-items: center; /* aligns the message vertically */
+    color: #ffffff; /* adjust as per your navbar color */
+    /* Add any additional styling as required */
+  }
+  
+  /* ... other styles ... */
+  
+  /* Adjust the .main-content to use a top value that is always below the navbar */
+  .main-content {
+    padding-top: 60px; /* This should be at least the height of your navbar */
+    padding-bottom: 20px; /* Extra space at the bottom */
+    margin: auto; /* Center the div on the page */
+    width: 1600px; /* Full width minus padding */
+    max-width: 1600px; /* Maximum width of the main content area */
+    position: relative; /* Use relative positioning */
+    box-sizing: border-box; /* Ensures padding is included in width */
+  }
+  
+  /* Make sure your table is responsive and fits within the .main-content */
+  table {
+    width: 100%; /* Full width of parent container */
+    max-width: 100%; /* Ensures table is not wider than the screen */
+    border-collapse: collapse; /* Collapses border */
+  }
+  
+  /* Ensure that th and td elements have a min-width */
+  th, td {
+    min-width: 120px; /* Minimum width of table cells */
+  }
+  
+  /* Optional: You can add a media query for very large zoom levels or screens */
+  @media screen and (max-width: 768px) {
+    .main-content {
+      padding-top: 60px; /* Increase if navbar height increases */
+      width: 100%; /* Full width on smaller screens */
+    }
+  
+    th, td {
+      min-width: 80px; /* Smaller min-width for table cells on smaller screens */
+    }
+  }
+  
+  /* Add a media query for zoom or smaller screens to adjust font size if necessary */
+  @media screen and (max-width: 600px), (zoom: 90%) {
+    body {
+      font-size: 14px; /* Smaller font size */
+    }
+  }
+  
+  /* Additional media query for larger zoom levels */
+  @media screen and (zoom: 110%) {
+    .main-content {
+      padding-top: 80px; /* Adjust top padding to account for zoomed in content */
+    }
+  }
+    
+  /* Ensure buttons are visible */
+  /* button {
+    background-color: #4CAF50; /* Green */
+    /* color: white;
+    border: 1px solid #ccc; /* Add border for visibility */
+  /* } */
+  
+  /* Debugging colors */
+  th {
+    background-color: #f2f2f2; /* Light grey to ensure visibility */
+  }
+  
+  td {
+    background-color: #ffffff; /* White to ensure visibility */
+  }
+  
+  .bookings-section {
+    margin-top: 80px; /* or any value that suits your layout */
+  }
+  
+  
+  .h1
+  {
+    font-size: 2.0 em;
+    line-height: 1.1;
+  }
+  
+  .p
+  {
+    font-size: 8px;
+    line-height: 1.4;
+    color : black;
+  }
+  
+  .add-comment
+  {
+    width : 30%;
+  }
+  
+  .line-comments
+  {
+    flex-direction: row;
+  }
+  
+  .comment-item {
+    display: flex; /* Aligns children (email and comment) in a row */
+    align-items: center; /* Centers items vertically in case of varying line heights */
+    margin-bottom: 8px; /* Adds a little space between comment entries */
+  }
+  
+  .comment-author, .comment-text {
+    white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden; /* Keeps the text in a single line, hides overflow */
+    text-overflow: ellipsis; /* Adds an ellipsis if the text is too long */
+  }
+  
+  .comment-author {
+    margin-right: 8px; /* Adds space between the author and the comment */
+    font-weight: bold; /* Optional: Makes the author's email bold */
+  }
+  
+  

@@ -1,0 +1,175 @@
+    
+.navbar {
+    overflow: hidden;
+    background-color: #3498db;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 1000; 
+  }
+  
+  .navbar a {
+    float: right;
+    display: block; 
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: #3498db;
+  }
+  
+  .navbar a.active {
+    background-color: #2980b9; 
+    color: white;
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #3498db;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px; /* Adjust this value to increase the height */
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-start; /* Align links from left to right */
+    padding: 10px 20px; /* Adjust top and bottom padding as needed */
+    align-items: center; /* This will vertically center the contents */
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto; /* Push the links to the right */
+  }
+
+  .navbar .welcome-message {
+    margin-right: auto; /* pushes the navigation links to the right */
+    padding-left: 1rem; /* adds some space after the logo */
+    display: flex; /* aligns the message vertically */
+    align-items: center; /* aligns the message vertically */
+    color: #ffffff; /* adjust as per your navbar color */
+    /* Add any additional styling as required */
+  }
+ 
+/* Adjust the .main-content class to ensure proper alignment and spacing */
+.main-content {
+    padding-top: 60px; /* Adjusted for navbar height */
+    padding-bottom: 20px;
+    margin: auto;
+    width: 100%; /* Adjust the width as per your design */
+    max-width: 1200px; /* Adjust the max width as per your design */
+     height: 650px;
+}
+
+
+  .cancel-prescription
+  {
+    background-color: #dc3545; /* Bootstrap red */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  .form-buttons button:hover {
+    opacity: 0.9; /* Slight transparency effect on hover */
+  }
+
+  .p{
+    text-align: left;
+  }
+
+  .appointment-details {
+    text-align: left;
+    /* Other styles */
+  }
+
+  .prescription-details
+  {
+    text-align: left;
+  }
+
+  @media print {
+    body {
+      color: black;
+      background: white;
+    }
+    .header, .nav-links, .welcome-message, .cancel-prescription {
+      display: none;
+    }
+    .main-content {
+      width: 100%;
+      border: none;
+    }
+    /* Add any other print-specific styles here */
+  }
+
+  .print-prescription
+  {
+    background-color: #3498db; /* Bootstrap red */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  
+  .print-prescription.greyed-out {
+    background-color: grey;
+    color: lightgrey;
+    cursor: not-allowed;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    padding : 10px;
+  }
+
+  .prescription-form-container {
+  padding-top: 20px; /* Adds space before the buttons section */
+}
+
+
+.button-container > button {
+  margin: 0 10px; /* Adds space between buttons */
+}
+
+.buy-prescription {
+  background-color: #28a745; /* Default green color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.buy-prescription:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.buy-prescription:disabled {
+  background-color: #ccc; /* Light gray for disabled state */
+  color: #666; /* Darker gray text color */
+  cursor: not-allowed; /* Cursor indicates no action */
+  opacity: 0.6; /* Reduced opacity for disabled state */
+}
+
+.total-cost-summary {
+  text-align: right;  /* Align text within the div to the right */
+  padding-right: 60px;  /* Set padding on the right side to zero */
+}
+
+  
+ 

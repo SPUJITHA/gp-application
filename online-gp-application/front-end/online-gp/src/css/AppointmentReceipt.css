@@ -1,0 +1,55 @@
+.receipt-container {
+    /* Center the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh; /* Adjust height to take full viewport, if desired */
+    padding: 0 80px; /* Add some padding around */
+    width : 100%;
+    max-width: 100vw;
+  }
+  
+  .receipt-content {
+    width: 1000px; /* Set width to 75% of its parent container */
+    margin: 0 auto; /* This will center the div in the parent container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for some depth */
+    background-color: #fff; /* Assuming you want a white background */
+    padding: 80px; /* Adds padding inside the div */
+    border-radius: 10px; /* Rounds the corners */
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+    max-width: 1000px;
+    font-size: 2em;
+  }
+   
+  .receipt-details {
+    /* Adjust the details styling as necessary */
+    margin-bottom: 20px;
+    text-align: left; 
+  }
+  
+  .receipt-details p {
+    margin: 0; /* Removes default paragraph margin */
+    padding-left: 0; /* Ensures text starts from the very left of the container */
+  }
+
+  /* This will make sure your printed version is still styled correctly */
+  @media print {
+    .receipt-content, .receipt-details, .receipt-details p, button {
+      text-align: left;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  
+    /* Hide elements not needed for printing */
+    .navbar, .welcome-message, .nav-links {
+      display: none;
+    }
+  }
+  
+  button {
+    text-align: left; /* Align button text to the left */
+    margin-left: 0; /* Ensures button starts from the very left of the container */
+    /* Other button styling */
+  }
+  
+  
