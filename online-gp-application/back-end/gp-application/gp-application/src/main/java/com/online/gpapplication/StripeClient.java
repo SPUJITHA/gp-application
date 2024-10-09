@@ -13,7 +13,7 @@ import java.util.UUID;
 public class StripeClient {
     @Autowired
     StripeClient() {
-        Stripe.apiKey = "sk_test_51P83qdRueapjU1d1gXcxPgTXwwmFFivKkIj4xuV6pfmTUoyY4ucR67UjKVGh9SwirUKTqAXfH51oP8sx3gaYqTxJ00ebSx3lLI";
+        Stripe.apiKey = "";
     }
     
     public Charge chargeNewCard(String token, double amount) throws Exception {
