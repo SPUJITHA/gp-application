@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 import Stripe from "react-stripe-checkout";
 import StripeCheckout from 'react-stripe-checkout';
 import { Link, useNavigate } from 'react-router-dom';
-const stripePromise = loadStripe('pk_test_51P83qdRueapjU1d1qcAjCsyvd9SCgmKX3YayecEwLN1KMlndC8SHHs1Yz9RJHJHVx7krnu5WWpg3XuFaLBDpNJzo007b8erzPp'); // Ensure this is your Stripe publishable key
+const stripePromise = loadStripe(''); // Ensure this is your Stripe publishable key
 
 const Paymentform = () => {
     const navigate = useNavigate();
